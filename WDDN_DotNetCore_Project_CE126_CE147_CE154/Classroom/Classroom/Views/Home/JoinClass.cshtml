@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_HomeNav.cshtml";
+    ViewBag.Title = "Join Class";
+}
+@model Class
+
+<form method="post"  style="margin-left: 5px; margin-top: 5px;">
+    <div class="mb-3">
+        <label class="form-label" asp-for="ClassCode"></label>
+        <input class="form-control" asp-for="ClassCode" />
+        <span class="text-danger" asp-validation-for="ClassCode"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Join</button>
+    <div class="text-danger">@ViewBag.Error</div>
+</form>
