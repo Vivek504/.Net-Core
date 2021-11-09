@@ -113,6 +113,45 @@ namespace Classroom.Migrations
                     b.ToTable("Classes");
                 });
 
+            modelBuilder.Entity("Classroom.Models.Material", b =>
+                {
+                    b.Property<int>("MaterialId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ClassCode")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Deadline")
+                        .HasColumnType("Date");
+
+                    b.Property<string>("Desc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DocName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DocType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("Document")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<bool>("IsAssignment")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UploadTime")
+                        .HasColumnType("Date");
+
+                    b.HasKey("MaterialId");
+
+                    b.ToTable("Materials");
+                });
+
             modelBuilder.Entity("Classroom.Models.Student", b =>
                 {
                     b.Property<int>("StudentId")

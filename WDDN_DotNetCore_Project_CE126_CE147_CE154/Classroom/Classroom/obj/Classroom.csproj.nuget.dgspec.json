@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj": {}
+    "D:\\LabSubmission\\SEM5\\WDDN\\.Net Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj": {}
   },
   "projects": {
-    "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj": {
+    "D:\\LabSubmission\\SEM5\\WDDN\\.Net Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj",
+        "projectUniqueName": "D:\\LabSubmission\\SEM5\\WDDN\\.Net Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj",
         "projectName": "Classroom",
-        "projectPath": "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj",
-        "packagesPath": "C:\\Users\\vivek\\.nuget\\packages\\",
-        "outputPath": "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\obj\\",
+        "projectPath": "D:\\LabSubmission\\SEM5\\WDDN\\.Net Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\LabSubmission\\SEM5\\WDDN\\.Net Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vivek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNet.WebHelpers": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.11, )"
@@ -77,6 +81,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.17, 3.1.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

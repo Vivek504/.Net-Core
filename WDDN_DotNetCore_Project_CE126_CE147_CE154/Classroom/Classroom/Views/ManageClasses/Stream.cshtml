@@ -1,0 +1,54 @@
+﻿@{
+    if (ViewBag.isTeacher)
+    {
+        Layout = "~/Views/Shared/_TeacherNav.cshtml";
+        ViewBag.Title = "Stream";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_StudentNav.cshtml";
+        ViewBag.Title = "Stream";
+    }
+}
+@model TeacherMaterialViewModel
+
+<style>
+    .panel {
+        width: auto;
+        height: auto;
+        border: 1px solid #e3f2fd;
+    }
+
+    .panel-heading {
+        background-color: #c9e9ff;
+        padding-bottom: 0.1%;
+        padding-top: 1%;
+        padding-left: 1%;
+    }
+
+    .panel-body {
+        padding: 1%;
+    }
+</style>
+
+@foreach (Material material in Model.Materials)
+{
+<a asp-controller="ManageClasses" asp-action="ViewMaterial" style="text-decoration: none; color: black">
+    <div class="panel">
+        <div class="panel-heading">
+            @if (material.IsAssignment)
+            {
+                <p>@Model.teacher_name posted a new assignment</p>
+            }
+            else
+            {
+                <p>@Model.teacher_name posted a new material</p>
+            }
+        </div>
+        <div class="panel-body">
+            @material.Title
+        </div>
+    </div>
+</a>
+<br />
+}

@@ -14,6 +14,7 @@ namespace Classroom.Controllers
         private readonly IClassRepository _classRepository;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
+        public Class[] classes { get; set; }
 
         public HomeController(IClassRepository classRepository,UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
@@ -23,9 +24,41 @@ namespace Classroom.Controllers
         }
 
         [Route("Home")]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var current_user = await userManager.GetUserAsync(User);
+            var teachers = _classRepository.GetTeacher(current_user.Email);
+            var students = _classRepository.GetStudent(current_user.Email);
+            int array_len = teachers.Count();
+            array_len += students.Count();
+            classes = new Class[array_len];
+            int len = 0;
+            if (teachers != null)
+            {
+                foreach (var t in teachers)
+                {
+                    var cls = _classRepository.GetClass(t.ClassCode);
+                    classes[len] = new Class();
+                    classes[len].ClassName = cls.ClassName;
+                    classes[len].SubName = cls.SubName;
+                    classes[len].ClassCode = cls.ClassCode;
+                    len++;
+                }
+            }
+            if (students != null)
+            {
+                foreach (var s in students)
+                {
+                    var cls = _classRepository.GetClass(s.ClassCode);
+                    classes[len] = new Class();
+                    classes[len].ClassName = cls.ClassName;
+                    classes[len].SubName = cls.SubName;
+                    classes[len].ClassCode = cls.ClassCode;
+                    len++;
+                }
+            }
+
+            return View(classes);
         }
 
         [Route("Create-Class")]

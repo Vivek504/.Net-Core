@@ -1,0 +1,105 @@
+﻿using Classroom.Models;
+using Classroom.ViewModels;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Web.Helpers;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace Classroom.Controllers
+{
+    public class ManageClassesController : Controller
+    {
+        private readonly IClassRepository _classRepository;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly SignInManager<ApplicationUser> signInManager;
+        public Class[] classes { get; set; }
+        public string ClassCode = "_class_code";
+        public string[] teachers_list { get; set; }
+        public string[] students_list { get; set; }
+
+        public ManageClassesController(IClassRepository classRepository, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        {
+            _classRepository = classRepository;
+            this.userManager = userManager;
+            this.signInManager = signInManager;
+        }
+
+        [Route("Stream")]
+        public async Task<IActionResult> Stream(int? class_code)
+        {
+            if(class_code != null)
+                HttpContext.Session.SetInt32(ClassCode, (int)class_code);
+            else
+                class_code = HttpContext.Session.GetInt32(ClassCode).Value;
+            var current_user = await userManager.GetUserAsync(User);
+            ViewBag.isTeacher = _classRepository.isTeacher(current_user.Email, (int)class_code);
+
+            TeacherMaterialViewModel model = new TeacherMaterialViewModel();
+            Teacher[] teacher = _classRepository.GetTeacher((int)class_code).ToArray();
+            model.teacher_name = teacher[0].FName + " " + teacher[0].LName;
+            model.Materials = _classRepository.GetMaterials((int)class_code);
+            return View(model);
+        }
+        [Route("People")]
+        public async Task<IActionResult> People()
+        {
+            int class_code = HttpContext.Session.GetInt32(ClassCode).Value;
+            var current_user = await userManager.GetUserAsync(User);
+            ViewBag.isTeacher = _classRepository.isTeacher(current_user.Email, class_code);
+            StudentTeacherViewModel mymodel = new StudentTeacherViewModel();
+            mymodel.Teachers = _classRepository.GetTeacher(class_code);
+            mymodel.Students = _classRepository.GetStudent(class_code);
+            return View(mymodel);
+        }
+        [Route("AddMaterial")]
+        [HttpGet]
+        public IActionResult AddMaterial()
+        {
+            return View();
+        }
+        [Route("AddMaterial")]
+        [HttpPost]
+        public IActionResult AddMaterial(IFormFile file, Material model)
+        {
+            Material material = new Material();
+            if (file != null)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var fileExtension = Path.GetExtension(fileName);
+                var newFileName = String.Concat(Convert.ToString(Guid.NewGuid()), fileExtension);
+                material.DocName = newFileName;
+                material.DocType = fileExtension;
+                using (var target = new MemoryStream())
+                {
+                    file.CopyTo(target);
+                    material.Document = target.ToArray();
+                }
+            }
+            material.ClassCode = HttpContext.Session.GetInt32(ClassCode).Value;
+            material.Title = model.Title;
+            material.Desc = model.Desc;
+            material.UploadTime = DateTime.Now.Date;
+            if (model.IsAssignment)
+            {
+                material.IsAssignment = true;
+                if (model.Deadline != null)
+                {
+                    material.Deadline = model.Deadline;
+                }
+            }
+            else
+                material.IsAssignment = false;
+            _classRepository.AddMaterial(material);
+            ViewBag.isTeacher = true;
+            TeacherMaterialViewModel viewModel = new TeacherMaterialViewModel();
+            Teacher[] teacher = _classRepository.GetTeacher(material.ClassCode).ToArray();
+            viewModel.teacher_name = teacher[0].FName + " " + teacher[0].LName;
+            viewModel.Materials = _classRepository.GetMaterials(material.ClassCode);
+            return View("Stream",viewModel);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+﻿@{
+    if (ViewBag.isTeacher)
+    {
+        Layout = "~/Views/Shared/_TeacherNav.cshtml";
+        ViewBag.Title = "Stream";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_StudentNav.cshtml";
+        ViewBag.Title = "Stream";
+    }
+}
+@model StudentTeacherViewModel
+<style>
+    h2 {
+        color: royalblue;
+    }
+</style>
+
+<h2>Teachers</h2>
+@foreach (Teacher teacher in Model.Teachers)
+{
+    <hr>
+    <p class="fs-5">@teacher.FName @teacher.LName </p>
+    <br />
+}
+<h2>Students</h2>
+@foreach (Student student in Model.Students)
+{
+    <hr>
+    <p class="fs-5">@student.FName @student.LName</p>
+    <br />
+}

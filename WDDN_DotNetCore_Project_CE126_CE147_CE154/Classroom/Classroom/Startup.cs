@@ -27,6 +27,7 @@ namespace Classroom
         {
             services.AddDbContextPool<ClassroomDbContext>(options => options.UseSqlServer(_configuration.GetConnectionString("ClassroomDBConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ClassroomDbContext>();
+            services.AddSession();
             services.AddControllersWithViews();
             services.AddScoped<IClassRepository, MockClassRepository>();
         }
@@ -41,6 +42,7 @@ namespace Classroom
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseRouting();
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

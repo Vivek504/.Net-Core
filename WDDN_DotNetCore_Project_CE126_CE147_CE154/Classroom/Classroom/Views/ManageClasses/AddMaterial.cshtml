@@ -1,0 +1,50 @@
+﻿@using Microsoft.Web.Helpers;
+@{
+    Layout = "~/Views/Shared/_TeacherNav.cshtml";
+    ViewBag.Title = "Add Material";
+}
+@model Material
+
+<form method="post" enctype="multipart/form-data">
+
+    <br />
+    <div class="mb-3">
+        <label class="form-label" asp-for="Title"></label>
+        <input class="form-control" asp-for="Title" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <br />
+    <div class="form-floating">
+        <input type="text" asp-for="Desc" class="form-control" Style="height: 100px" />
+        <label asp-for="Desc">Description</label>
+    </div>
+    <br />
+    <div class="mb-3">
+        <label class="form-label">Add Material</label>
+        <input class="form-control" type="file" name="file" />
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-text">
+            <input asp-for="IsAssignment" class="form-check-input mt-0" onclick="onChecked(this)" type="checkbox" aria-label="Checkbox for following text input" />
+        </div>
+        <textarea readonly class="form-control" aria-label="Text input with checkbox" rows="1">Is it an Assignment?</textarea>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Deadline" class="=form-label"></label>
+        <input asp-for="Deadline" id="deadline_time" disabled="disabled" type="date" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <button asp-page-handler="Upload" type="submit" class="btn btn-primary">Upload</button>
+    </div>
+</form>
+<script type="text/javascript">
+    function onChecked(check) {
+        var ele = document.getElementById("deadline_time");
+        if (check.checked == true) {
+            ele.disabled = false;
+        }
+        else {
+            ele.disabled = true;
+        }
+    }
+</script>

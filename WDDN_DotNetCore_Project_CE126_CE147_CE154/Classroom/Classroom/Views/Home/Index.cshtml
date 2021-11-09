@@ -1,4 +1,42 @@
-﻿@{ 
+﻿@{
     Layout = "~/Views/Shared/_HomeNav.cshtml";
     ViewBag.Title = "Home";
+}
+@model Class[]
+
+<style>
+    .panel {
+        width: auto;
+        height: auto;
+        border: 1px solid #e3f2fd;
+    }
+
+    .panel-heading {
+        background-color: lightskyblue;
+        height: 50%;
+        padding: 1%;
+    }
+
+    .panel-body {
+        padding: 1%;
+    }
+</style>
+
+<br />
+@foreach (var item in Model)
+{
+    <div>
+    <a asp-controller="ManageClasses" asp-action="Stream" asp-route-class_code="@item.ClassCode" style="text-decoration: none; color: black">
+        <div class="panel">
+            <div class="panel-heading">
+                @item.ClassName
+            </div>
+
+            <div class="panel-body">
+                @item.SubName
+            </div>
+        </div>
+    </a>
+    </div>
+    <br />
 }

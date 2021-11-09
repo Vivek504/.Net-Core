@@ -17,5 +17,6 @@ namespace Classroom.Models
         public DbSet<Class> Classes { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Material> Materials { get; set; }
     }
 }
