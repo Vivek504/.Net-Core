@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_TeacherNav.cshtml";
+    ViewBag.Title = "View Assignment";
+}
+@model Submission
+<div style="margin-left: 5px;">
+    <br />
+    <h2>View Submission</h2>
+    <hr />
+    <h5>Name</h5>
+    <p>@ViewBag.name</p>
+    <h5>Email</h5>
+    <p>@Model.Email</p>
+    <h5>Attachment</h5>
+    <p>@Model.DocName</p>
+    <form asp-controller="ManageClasses" asp-action="ViewAssignmentFile" method="post">
+        <button type="submit" class="btn btn-primary">View Assignment</button>
+    </form>
+    <form asp-controller="ManageClasses" asp-action="DownloadAssignment" method="post" style="margin-top:5px;">
+        <button type="submit" class="btn btn-primary">Download Assignment</button>
+    </form>
+    <h6 style="margin-top:7px;">Submission time</h6>
+    <p>@Model.SubmissionTime</p>
+</div>

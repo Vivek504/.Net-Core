@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_TeacherNav.cshtml";
+    ViewBag.Title = "View Submission";
+}
+@model StudentSubmissionViewModel
+<br />
+<div style="margin-left: 5px;">
+    <h2>Submitted</h2>
+    <hr />
+    <h5>@ViewBag.turnedinStudents Turned in &nbsp;&nbsp;&nbsp;<span></span>&nbsp;&nbsp;&nbsp; @ViewBag.assignedStudents Assigned</h5>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Assignment</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.SubmittedStudents.Count(); i++)
+            {
+                <tr>
+                    <td>@(i+1)</td>
+                    <td>@Model.SubmittedStudents.ElementAt(i).FName</td>
+                    <td>@Model.SubmittedStudents.ElementAt(i).LName </td>
+                    <td>@Model.SubmittedStudents.ElementAt(i).Email</td>
+                    <td>
+                        <a asp-controller="ManageClasses" asp-action="ViewAssignment" asp-route-id="@Model.Submissions.ElementAt(i).SubmissionId" style="text-decoration:none;">View</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

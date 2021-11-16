@@ -74,11 +74,11 @@ namespace Classroom.Controllers
             }
             return View(model);
         }
-        //[HttpPost]
-        //public async Task<IActionResult> Logout()
-        //{
-        //    await signInManager.SignOutAsync();
-        //    return RedirectToAction("");
-        //}
+        [Route("Logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Login");
+        }
     }
 }

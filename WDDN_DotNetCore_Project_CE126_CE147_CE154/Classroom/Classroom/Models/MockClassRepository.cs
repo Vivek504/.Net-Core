@@ -39,7 +39,16 @@ namespace Classroom.Models
             context.SaveChanges();
             return material;
         }
-
+        public Submission AddSubmission(Submission submission)
+        {
+            context.Submissions.Add(submission);
+            context.SaveChanges();
+            return submission;
+        }
+        public List<Submission> GetSubmissions(int class_code)
+        {
+           return context.Submissions.Where(s => s.ClassCode == class_code).ToList<Submission>();
+        }
         public Class GetClass(int class_code)
         {
             return context.Classes.Where(c => c.ClassCode == class_code).FirstOrDefault<Class>();
@@ -68,6 +77,10 @@ namespace Classroom.Models
         {
             return context.Materials.Where(m => m.ClassCode == class_code).OrderByDescending(m => m.UploadTime).ToList<Material>();
         }
+        public Material GetMaterial(int material_id)
+        {
+            return context.Materials.Where(m => m.MaterialId == material_id).FirstOrDefault<Material>();
+        }
 
         public bool IsClassCodeExist(int new_class_code)
         {
@@ -84,6 +97,11 @@ namespace Classroom.Models
             if (teacher != null)
                 return true;
             return false;
+        }
+
+        public Submission GetSubmission(int id)
+        {
+            return context.Submissions.Where(s => s.SubmissionId == id).FirstOrDefault<Submission>();
         }
     }
 }

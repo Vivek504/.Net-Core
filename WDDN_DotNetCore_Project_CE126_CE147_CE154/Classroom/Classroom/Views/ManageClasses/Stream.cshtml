@@ -30,10 +30,10 @@
         padding: 1%;
     }
 </style>
-
+<div style="margin-right:5px;margin-bottom:8px;text-align:right;"><b>Class Code : @ViewBag.ClassCode</b></div>
 @foreach (Material material in Model.Materials)
 {
-<a asp-controller="ManageClasses" asp-action="ViewMaterial" style="text-decoration: none; color: black">
+<a asp-controller="ManageClasses" asp-action="ViewMaterial" asp-route-material_id="@material.MaterialId" style="text-decoration: none; color: black">
     <div class="panel">
         <div class="panel-heading">
             @if (material.IsAssignment)

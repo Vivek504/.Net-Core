@@ -1,0 +1,53 @@
+﻿@{
+    if (ViewBag.isTeacher)
+    {
+        Layout = "~/Views/Shared/_TeacherNav.cshtml";
+        ViewBag.Title = "Stream";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_StudentNav.cshtml";
+        ViewBag.Title = "Stream";
+    }
+}
+@model Material
+<h2 style="margin-left: 5px;">@Model.Title</h2>
+<div style="float: right;">
+    @if (Model.IsAssignment)
+    {
+        @if (Model.Deadline != null)
+        {
+            <h6 style="margin-right: 5px">Due  @Model.Deadline</h6>
+        }
+        else
+        {
+            <h6 style="margin-right: 5px">No due date</h6>
+        }
+    }
+</div>
+<hr style="margin-top: 36px" />
+<div style="margin-left: 5px">
+    <p style="font-size: large">@Model.Desc</p>
+    @if (Model.DocName != null)
+    {
+        <h4>Attachment</h4>
+        <p style="margin-bottom: 6px">@Model.DocName</p>
+        <form asp-controller="ManageClasses" asp-action="ViewFile" method="post">
+            <button type="submit" class="btn btn-primary">View File</button>
+        </form>
+        <form asp-controller="ManageClasses" asp-action="DownloadFile" method="post" style="margin-top:5px;">
+            <button type="submit" class="btn btn-primary">Download File</button>
+        </form>
+        <br />
+    }
+    @if (Model.IsAssignment && !ViewBag.isTeacher)
+    {
+        <form method="post" enctype="multipart/form-data" asp-controller="ManageClasses" asp-action="SubmitAssignment">
+            <h4>Submit Assignment</h4>
+            <input type="file" name="file" class="form-control" style="margin-top: 10px; margin-bottom: 8px;" />
+            <button type="submit" asp-page-handler="Upload" class="btn btn-primary">Submit</button>
+        </form>
+
+
+    }
+</div>

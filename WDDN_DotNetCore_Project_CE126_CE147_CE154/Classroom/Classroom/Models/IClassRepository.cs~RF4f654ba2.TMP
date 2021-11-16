@@ -19,9 +19,5 @@ namespace Classroom.Models
         Class GetClass(int class_code);
         bool isTeacher(string email, int class_code);
         List<Material> GetMaterials(int class_code);
-        Material GetMaterial(int material_id);
-        Submission AddSubmission(Submission submission);
-        List<Submission> GetSubmissions(int class_code);
-        Submission GetSubmission(int id);
     }
 }
