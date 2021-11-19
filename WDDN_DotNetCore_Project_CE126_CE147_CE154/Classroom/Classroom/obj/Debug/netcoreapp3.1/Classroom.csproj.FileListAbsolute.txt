@@ -505,3 +505,22 @@ C:\Users\JAY PRAJAPATI\OneDrive\Desktop\LabsBooks\Sem_5_Lab\WDDN_LAB\.NetCorePro
 C:\Users\JAY PRAJAPATI\OneDrive\Desktop\LabsBooks\Sem_5_Lab\WDDN_LAB\.NetCoreProject\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\ViewSubmission.cshtml.g.cs
 C:\Users\JAY PRAJAPATI\OneDrive\Desktop\LabsBooks\Sem_5_Lab\WDDN_LAB\.NetCoreProject\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\ViewAssignment.cshtml.g.cs
 C:\Users\JAY PRAJAPATI\OneDrive\Desktop\LabsBooks\Sem_5_Lab\WDDN_LAB\.NetCoreProject\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\ViewAssignmentFile.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\Microsoft.Web.Helpers.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\WebMatrix.Data.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\WebMatrix.WebData.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\AddMaterial.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\People.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\Stream.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\ViewAssignment.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\ViewAssignmentFile.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\ViewFIle.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\ViewMaterial.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\ManageClasses\ViewSubmission.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_StudentNav.cshtml.g.cs
+D:\Project and Lab submission\Sem 5\1_WDDN\.Ner Core Project\WDDN_DotNetCore_Project_CE126_CE147_CE154\Classroom\Classroom\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TeacherNav.cshtml.g.cs

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JAY PRAJAPATI\\OneDrive\\Desktop\\LabsBooks\\Sem_5_Lab\\WDDN_LAB\\.NetCoreProject\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj": {}
+    "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JAY PRAJAPATI\\OneDrive\\Desktop\\LabsBooks\\Sem_5_Lab\\WDDN_LAB\\.NetCoreProject\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj": {
+    "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JAY PRAJAPATI\\OneDrive\\Desktop\\LabsBooks\\Sem_5_Lab\\WDDN_LAB\\.NetCoreProject\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj",
+        "projectUniqueName": "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj",
         "projectName": "Classroom",
-        "projectPath": "C:\\Users\\JAY PRAJAPATI\\OneDrive\\Desktop\\LabsBooks\\Sem_5_Lab\\WDDN_LAB\\.NetCoreProject\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj",
-        "packagesPath": "C:\\Users\\JAY PRAJAPATI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JAY PRAJAPATI\\OneDrive\\Desktop\\LabsBooks\\Sem_5_Lab\\WDDN_LAB\\.NetCoreProject\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\obj\\",
+        "projectPath": "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\Classroom.csproj",
+        "packagesPath": "C:\\Users\\vivek\\.nuget\\packages\\",
+        "outputPath": "D:\\Project and Lab submission\\Sem 5\\1_WDDN\\.Ner Core Project\\WDDN_DotNetCore_Project_CE126_CE147_CE154\\Classroom\\Classroom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JAY PRAJAPATI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vivek\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
